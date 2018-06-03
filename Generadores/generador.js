@@ -17,7 +17,7 @@ for (let i = 0; i < nArchivos; i++) {
         let point = [x, y, z];
         texto += `${point}\n`;
     }
-    url += `${i + 1}`;
+    url += `${i + 1}.txt`;
     let writeStream = fs.createWriteStream(url);
     writeStream.write(texto);
     writeStream.on('finish', () => {
